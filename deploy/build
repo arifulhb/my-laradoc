@@ -1,2 +1,1 @@
-
-docker-compose up -d nginx mysql workspace redis
+docker-compose build nginx mysql workspace redis
