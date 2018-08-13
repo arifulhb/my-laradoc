@@ -167,6 +167,7 @@ ARG INSTALL_LDAP=false
 ARG PHP_VERSION=${PHP_VERSION}
 
 RUN if [ ${INSTALL_LDAP} = true ]; then \
+    apt-get update -yqq && \
     apt-get install -y libldap2-dev && \
     apt-get install -y php${PHP_VERSION}-ldap \
 ;fi
