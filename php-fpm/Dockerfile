@@ -220,9 +220,11 @@ RUN if [ ${INSTALL_MEMCACHED} = true ]; then \
 
 ARG INSTALL_EXIF=false
 
-RUN if [ ${INSTALL_EXIF} = true ]; then \
+ RUN if [ ${INSTALL_EXIF} = true ]; then \
     # Enable Exif PHP extentions requirements
-    docker-php-ext-install exif \
+    # docker-php-ext-install exif \
+     docker-php-ext-install exif && \
+     docker-php-ext-enable exif \
 ;fi
 
 ###########################################################################
